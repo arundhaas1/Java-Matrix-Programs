@@ -1,0 +1,35 @@
+      //Transverse of matrix
+      
+package com.dhas;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+public  class Main {
+    public static void main(String[] args) throws Exception {
+
+        int a[][] = {{1, 2, 1},
+                     {1, 3, 1},
+                     {2, 2, 1}};
+        int noOfRow=a.length;
+        int noOfColum=a[0].length;
+
+        int b[][]=new int [column][row];
+
+        for (int i=0;i<row;i++){
+            for (int j=0;j<column;j++){
+                b[j][i]=a[i][j];
+            }
+        }
+
+        //for output purpose
+
+        for (int i=0;i<b.length;i++){
+            for (int j=0;j<b[0].length;j++){
+                System.out.print(b[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+_______________________________________________________________________________________________________________________________________________________________________________
