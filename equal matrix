@@ -1,0 +1,43 @@
+      //equal matrix
+      
+package com.dhas;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+public  class Main {
+    public static void main(String[] args) throws Exception {
+        int a[][] = {
+                {1, 2, 3},   //intialize a.
+                {8, 4, 6},
+                {4, 5, 7}
+        };
+
+        int b[][] = {
+                {1, 2, 3},     //intialize b
+                {8, 4, 6},
+                {4, 5, 7}
+        };
+        boolean flag=true;
+
+       if(a.length==b.length){
+           for (int i=0;i<a.length;i++){
+               for (int j=0;j<b.length;j++){
+                   if(a[i][j]!=b[i][j]){    //check all elements
+                       flag=false;
+                       break;
+                   }
+               }
+           }
+       }else{
+           flag=false;
+       }
+        if(flag==true){
+            System.out.println("both are the equal matrix");
+        }else{
+            System.out.println("both are not an equal matrix");
+        }
+    }
+}
+
+
+_______________________________________________________________________________________________________________________________________________________________
