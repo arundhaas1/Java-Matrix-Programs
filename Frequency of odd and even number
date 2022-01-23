@@ -1,0 +1,28 @@
+      //Frequency of odd and even number
+      
+package com.dhas;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+public  class Main {
+    public static void main(String[] args) throws Exception {
+        int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
+        int evenCount=0;
+        int oddCount=0;
+
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<a.length;j++){
+                if(a[i][j]%2==0){
+                    evenCount++;
+                }else {
+                    oddCount++;
+                }
+            }
+        }
+        System.out.println("frequency of even number is "+evenCount);
+        System.out.println("frequency of odd number is "+oddCount);
+    }
+}
+
+
+______________________________________________________________________________________________________________________________________________________________________
