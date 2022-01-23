@@ -7,16 +7,19 @@ import java.util.Collections;
 public  class Main {
     public static void main(String[] args) throws Exception {
         int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
-        int c[][] =new int[a.length][a.length];     //a.length => rows   
+        
+        int noOfRow=a.length;
+        int noOfColumn=a[0].length;
+        int c[][] =new int[column][row];     //a.length => rows   
 
-        for (int i=0;i< a.length;i++){
+        for (int i=0;i< row;i++){
             for (int j=0;j<i+1;j++){     //i+1 used to make triangle
                 c[i][j]=a[i][j];
             }
         }
 
         for (int i=0;i<c.length;i++){  //this is judt for print the data in the c.
-            for(int j=0;j<c.length;j++){
+            for(int j=0;j<c[0].length;j++){
                 System.out.print(c[i][j]);
             }
             System.out.println();
@@ -34,16 +37,18 @@ import java.util.Collections;
 public  class Main {
     public static void main(String[] args) throws Exception {
         int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
-        int c[][] =new int[a.length][a.length];
+        int noOfRow=a.length;
+        int noOfColumn=a[0].length;
+        int c[][] =new int[column][row];
 
-        for (int i=a.length-1;i>=0;i--){    //do the same in reverse order
-            for (int j=a.length-1;j>i-1;j--){
+        for (int i=row-1;i>=0;i--){    //do the same in reverse order
+            for (int j=column-1;j>i-1;j--){
                 c[i][j]=a[i][j];
             }
         }
 
         for (int i=0;i<c.length;i++){
-            for(int j=0;j<c.length;j++){
+            for(int j=0;j<c[0].length;j++){
                 System.out.print(c[i][j]);
             }
             System.out.println();
