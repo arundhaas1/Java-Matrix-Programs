@@ -1,0 +1,36 @@
+        //the sum of each row and each column of a matrix
+        
+package com.dhas;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+public  class Main {
+    public static void main(String[] args) throws Exception {
+        int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
+        int sumrow=0;
+        int sumcolum=0;
+
+
+        //for summing row
+
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<a.length;j++){
+               sumrow+=a[i][j];
+            }
+            System.out.println("sum of "+(i+1)+" row is "+sumrow);
+            sumrow=0;
+        }
+
+        //for summing column
+
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<a.length;j++){
+                sumcolum+=a[j][i];
+            }
+            System.out.println("sum of "+(i+1)+" column is "+sumcolum);
+            sumcolum=0;
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________
