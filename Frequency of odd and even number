@@ -9,9 +9,12 @@ public  class Main {
         int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
         int evenCount=0;
         int oddCount=0;
+        
+        int noOfRow=a.length;
+        int noOfColumn=a[0].length;
 
-        for (int i=0;i<a.length;i++){
-            for (int j=0;j<a.length;j++){
+        for (int i=0;i<row;i++){
+            for (int j=0;j<column;j++){
                 if(a[i][j]%2==0){
                     evenCount++;
                 }else {
