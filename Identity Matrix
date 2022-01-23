@@ -6,22 +6,21 @@ import java.util.Scanner;
 import java.util.Collections;
 public  class Main {
     public static void main(String[] args) throws Exception {
-        int a[][] = {{2,0,0},
-                     {0,2,0},
-                     {0,0,2}};
+        int a[][] = {{1,0,0},
+                     {0,1,0},
+                     {0,0,1}};
 
         int row=a.length;
         int column=a[0].length;
         boolean isZero=true;     //zero on other sides
         boolean isDiagonal=true;    //same num on diagonal
-        int numberOfa11=a[1][1];    //first value to check with other diagonal values
 
        if(row==column){
                  for (int i=0;i<row;i++){
                 for (int j=0;j<column;j++){
                     if(i==j){       //for diagonal matrix since it will be a11,a22,a33...
                         int num=a[i][j];   
-                        if(num!=numberOfa11){     //to check wheather it is same as the a11 .
+                        if(num!=1){     //to check wheather it is equal to 1 .
                             isDiagonal=false;
                             break;
                         }
