@@ -10,7 +10,7 @@ public  class Main {
         
         int noOfRow=a.length;
         int noOfColumn=a[0].length;
-        int c[][] =new int[column][row];     //a.length => rows   
+        int c[][] =new int[row][column];     //a.length => rows   
 
         for (int i=0;i< row;i++){
             for (int j=0;j<i+1;j++){     //i+1 used to make triangle
@@ -39,7 +39,7 @@ public  class Main {
         int a[][] = {{1, 2, 1},{1, 2, 1},{1, 2, 1}};
         int noOfRow=a.length;
         int noOfColumn=a[0].length;
-        int c[][] =new int[column][row];
+        int c[][] =new int[row][column];
 
         for (int i=row-1;i>=0;i--){    //do the same in reverse order
             for (int j=column-1;j>i-1;j--){
