@@ -1,0 +1,46 @@
+        //Identity Matrix
+        
+package com.dhas;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+public  class Main {
+    public static void main(String[] args) throws Exception {
+        int a[][] = {{2,0,0},
+                     {0,2,0},
+                     {0,0,2}};
+
+        int row=a.length;
+        int column=a[0].length;
+        boolean isZero=true;     //zero on other sides
+        boolean isDiagonal=true;    //same num on diagonal
+        int numberOfa11=a[1][1];    //first value to check with other diagonal values
+
+       if(row==column){
+                 for (int i=0;i<row;i++){
+                for (int j=0;j<column;j++){
+                    if(i==j){       //for diagonal matrix since it will be a11,a22,a33...
+                        int num=a[i][j];   
+                        if(num!=numberOfa11){     //to check wheather it is same as the a11 .
+                            isDiagonal=false;
+                            break;
+                        }
+                    }else {
+                        if(a[i][j]!=0){   //to check wheather the other values are zero.
+                            isZero=false;
+                            break;
+                        }
+                    }
+                }
+            }
+            if(isDiagonal==true && isZero==true){
+                System.out.println("It is an identity matrix");
+            }else{
+                System.out.println("It is not an identity matrix");
+            }
+       }else{
+        System.out.println("It is not an identity matrix");
+       }
+    }
+}
+
